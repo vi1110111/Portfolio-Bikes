@@ -1,0 +1,18 @@
+.title {
+  &__header {
+    text-transform: uppercase;
+    color: $main-color;
+    margin-top: 35px;
+    font-size: 18px;
+    text-align: center;
+  }
+  &__subheader {
+    margin-top: 35px;
+    color: $second-color;
+    font-size: 18px;
+    text-align: center;
+    &-fz16 {
+      font-size: 16px;
+    }
+  }
+}

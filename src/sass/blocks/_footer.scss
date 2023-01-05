@@ -1,0 +1,26 @@
+.footer {
+  height: 180px;
+  background-color: $back-color;
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__info {
+    &__header {
+      font-weight: bold;
+      font-size: 16px;
+      color: $second-color;
+    }
+    &__subheader {
+      font-size: 14px;
+      color: $second-color;
+    }
+  }
+  &__links {
+    width: 135px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

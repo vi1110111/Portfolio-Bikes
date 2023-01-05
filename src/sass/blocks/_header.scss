@@ -1,0 +1,123 @@
+.header {
+  background: url("../assets/img/First_bg.jpg") center (center/cover) no-repeat;
+  height: 100vh;
+  position: relative;
+  &__links__wrapper {
+    margin: 0 auto;
+    padding-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__burger__wrapper {
+    z-index: 5;
+    position: fixed;
+    padding-top: 15px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &__link {
+    margin: 0 20px;
+    text-transform: uppercase;
+    color: $main-color;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      color: $second-color;
+    }
+  }
+
+  .burger {
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    flex: 0 0 auto;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    border-style: solid;
+    border-color: $primary-color;
+    border-width: 5px;
+  }
+  .menu-btn span,
+  .menu-btn span::before,
+  .menu-btn span::after {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+  }
+  .menu-btn span::before,
+  .menu-btn span::after {
+    content: "";
+    display: block;
+    transition: 0.2s;
+  }
+  .menu-btn span::before {
+    transform: translateY(-5px);
+  }
+  .menu-btn span::after {
+    transform: translateY(5px);
+  }
+
+  .menu-btn_active {
+    background-color: $primary-color;
+  }
+  .menu-btn_active span:before {
+    transform: rotate(-35deg);
+    width: 10px;
+    transform-origin: left bottom;
+  }
+  .menu-btn_active span:after {
+    transform: rotate(35deg);
+    width: 10px;
+    transform-origin: left top;
+  }
+
+  .menu-nav a {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 100;
+    display: inline-block;
+    margin-right: 10px;
+    transition: 1s;
+  }
+  .menu-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    transform: scaleX(0) translateX(0%);
+    transform-origin: right center;
+    opacity: 0;
+    visibility: hidden;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: -25px;
+    background-color: #fff;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .menu-nav_active {
+    transform: scaleX(1) translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}
